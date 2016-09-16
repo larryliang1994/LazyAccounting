@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (3.4.2)
+  - HanekeSwift (0.10.1)
+  - HcdGuideView (0.0.4)
+  - SwiftyJSON (2.3.2)
+  - UMengAnalytics (4.1.0)
+  - UMengSocialCOM (5.2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.2)
+  - HanekeSwift (~> 0.10.1)
+  - HcdGuideView (~> 0.0.4)
+  - SwiftyJSON (~> 2.3.2)
+  - UMengAnalytics (~> 4.1.0)
+  - UMengSocialCOM (~> 5.2.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  HcdGuideView: e4262378907a6793204f00c4ff51ec5699f48995
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UMengAnalytics: 19b28253793d77dff10fb7d502faad1fb6b8ce4a
+  UMengSocialCOM: 074c135ce349aa4c8848d3fb8458757bcb6ffb67
+
+PODFILE CHECKSUM: 66a22660da0b9cb2b4b2e32023469794dce28e1e
+
+COCOAPODS: 1.0.0

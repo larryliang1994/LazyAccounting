@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--懒人记账-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="懒人记账" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3j-uI-KcX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="EOQ-Md-Kax"/>
+                                    <constraint firstAttribute="height" constant="40" id="qlj-Pj-uVp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToL-N5-1sb">
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ToL-N5-1sb" secondAttribute="trailing" constant="-20" id="RCX-De-NZb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ToL-N5-1sb" secondAttribute="bottom" id="Tu2-IJ-ybq"/>
+                            <constraint firstItem="C3j-uI-KcX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-40" id="aN6-JD-UeS"/>
+                            <constraint firstItem="ToL-N5-1sb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dwp-L9-tef"/>
+                            <constraint firstItem="ToL-N5-1sb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="exW-xs-RGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C3j-uI-KcX" secondAttribute="trailing" constant="-20" id="ffJ-yN-JQC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="懒人记账" id="63k-we-4sJ">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="tDe-vi-rUP"/>
+                        <barButtonItem key="rightBarButtonItem" image="btn" id="D5O-CC-PE9"/>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="rightTopButton" destination="C3j-uI-KcX" id="yKC-xX-UOR"/>
+                        <outlet property="webView" destination="ToL-N5-1sb" id="neQ-MH-syU"/>
+                        <segue destination="Hqi-5f-21S" kind="show" identifier="feedback" id="dRz-17-gJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="355"/>
+        </scene>
+        <!--意见反馈-->
+        <scene sceneID="bSt-zA-9tG">
+            <objects>
+                <viewController title="意见反馈" id="Hqi-5f-21S" customClass="FeedbackViewController" customModule="懒人记账" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQs-cJ-9cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="GjQ-qp-ElI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Atz-ay-7YA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CYO-37-WMI" customClass="BRPlaceholderTextView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ClW-Vs-nrz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ClW-Vs-nrz"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CYO-37-WMI" secondAttribute="trailing" constant="-10" id="MHy-pG-NCj"/>
+                            <constraint firstItem="GjQ-qp-ElI" firstAttribute="top" secondItem="CYO-37-WMI" secondAttribute="bottom" constant="10" id="YDx-2U-fkm"/>
+                            <constraint firstItem="CYO-37-WMI" firstAttribute="leading" secondItem="Atz-ay-7YA" secondAttribute="leadingMargin" constant="-10" id="d7g-s5-tXf"/>
+                            <constraint firstItem="CYO-37-WMI" firstAttribute="top" secondItem="tQs-cJ-9cv" secondAttribute="bottom" id="eYb-cq-jt3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="TyR-fa-XMp">
+                        <barButtonItem key="rightBarButtonItem" title="发送" style="done" id="9Nx-Gx-GVr">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="send:" destination="Hqi-5f-21S" id="zZT-V2-ICL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="sendButton" destination="9Nx-Gx-GVr" id="iJT-Ie-hBI"/>
+                        <outlet property="textView" destination="CYO-37-WMI" id="Na9-xY-Pbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYS-xF-bfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031" y="355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nxc-MX-25z">
+            <objects>
+                <navigationController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="RYJ-yK-juh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VnM-hh-Q7e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Ra-P8-ZZN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QF-Lf-RF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.5" y="355.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn" width="32" height="32"/>
+    </resources>
+</document>
