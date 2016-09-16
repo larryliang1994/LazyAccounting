@@ -1,2 +1,0 @@
-# LazyAccounting
-LazyAccounting of JiuBaiWang
